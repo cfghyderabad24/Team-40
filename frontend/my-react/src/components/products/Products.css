@@ -1,0 +1,63 @@
+.products-container {
+  margin-left: 25%;
+  width:500px;
+  display: flex;
+  overflow-x: auto;  /* Enable horizontal scrolling */
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add box shadow */
+  border-radius: 8px;  /* Optional: to round the corners of the container */
+  gap: 16px;  /* Space between products */
+}
+
+.product-card {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 250px;
+  flex: 0 0 auto;  /* Prevent flex items from shrinking */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;  /* Hide overflow to prevent text from sliding out of container */
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-container {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-description {
+  z-index: 2;
+  top: 0;
+  left: 100%;
+  width: calc(100% - 10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 10px solid white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: left 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card:hover .product-description {
+  left: 90%;
+  opacity: 1;
+}
+
+.product-title {
+  margin: 10px 0;
+}
+
+.product-price {
+  margin: 10px 0
+}
