@@ -1,25 +1,15 @@
-require("dotenv").config(); // Load your updated API keys
-const { TwitterApi } = require("twitter-api-v2");
+require("dotenv").config();
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Create a client using your OAuth 1.0a User Context keys (OAuth 1.0a User Context is compatible with OAuth 2.0 User Context for this use case)
-const client = new TwitterApi({
-  appKey: process.env.CONSUMER_KEY,
-  appSecret: process.env.CONSUMER_SECRET,
-  accessToken: process.env.ACCESS_TOKEN,
-  accessSecret: process.env.ACCESS_TOKEN_SECRET,
-});
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
-// Define the text of your tweet
-const tweetText = "Hello, world! This is my first tweet from Node.js!";
+const run = async () => {
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const prompt = "Hi today is my birtday";
 
-// Make the API call to post the tweet
-async function tweet() {
-  try {
-    const { data: createdTweet } = await client.v2.tweet(tweetText);
-    console.log("Tweet created:", createdTweet);
-  } catch (error) {
-    console.error("Error creating tweet:", error);
-  }
-}
+  const result = await model.generateContent(prompt);
+  console.log(result.response.text());
+};
 
-tweet();
+run();

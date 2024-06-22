@@ -24,7 +24,7 @@ def gmail_send_message():
     service = build("gmail", "v1", credentials=creds)
     message = EmailMessage()
 
-    message.set_content("This is automated draft mail")
+    message.set_content("Happy birthday to me")
 
     message["To"] = "gvarshithreddy8@gmail.com"
     message["From"] = "zondyinc@gmail.com"
