@@ -28,4 +28,32 @@ const sendMail = () => {
   });
 };
 
-sendMail();
+const askQuery = () => {
+  const response = fetch("http://localhost:3001/textPrompt", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      promptText: "What is use of ProGame",
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data.text));
+};
+
+const sendUpdate = async () => {
+  const response = await fetch("http://localhost:3001/update", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      notification: "This is a test notification",
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+};
+
+sendUpdate();

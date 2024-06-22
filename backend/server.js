@@ -22,15 +22,14 @@ const Lead = require("./model/lead.js");
 const Track = require("./model/track.js");
 
 main()
-    .then(() => {
-        console.log("connection successful");
-    })
-    .catch(err => console.log(err))
+  .then(() => {
+    console.log("connection successful");
+  })
+  .catch((err) => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/leading');
+  await mongoose.connect("mongodb://127.0.0.1:27017/leading");
 }
-
 
 app.use(cors());
 
@@ -53,6 +52,28 @@ app.post("/imagePrompt", async (req, res) => {
   const text = await imagePrompt(promptText, ...imagePaths);
   data = { text };
   res.json(data);
+});
+
+app.post("/update", async (req, res) => {
+  const { notification } = req.body;
+  console.log(notification);
+  leads = await Lead.find();
+  leads = leads.map((lead) => {
+    return lead.email;
+  });
+
+  const response = await fetch("http://localhost:3002/sendUpdate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      leademails: leads,
+      body: notification,
+    }),
+  });
+
+  res.json({ message: "Notification sent" }, 200);
 });
 
 app.listen(3001, () => {

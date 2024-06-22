@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 
-def gmail_send_message():
+def gmail_send_message(toEmail : str, subject : str, body : str):
   """Create and send an email message
   Print the returned  message id
   Returns: Message object, including message id
@@ -24,11 +24,11 @@ def gmail_send_message():
     service = build("gmail", "v1", credentials=creds)
     message = EmailMessage()
 
-    message.set_content("Happy birthday to me")
+    message.set_content(body)
 
-    message["To"] = "gvarshithreddy8@gmail.com"
+    message["To"] = toEmail
     message["From"] = "zondyinc@gmail.com"
-    message["Subject"] = "Automated draft"
+    message["Subject"] = subject
 
     # encoded message
     encoded_message = base64.urlsafe_b64encode(message.as_bytes()).decode()

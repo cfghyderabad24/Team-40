@@ -13,7 +13,16 @@ def sendMail():
     else:
         return jsonify({"message": "Method Not Allowed"}), 405
         
-      
+@app.route('/sendUpdate', methods=['POST'])
+def sendUpdate():
+    if request.method == 'POST':
+        leademails = request.json['leademails']
+        print("leademails", leademails)
+        subject = "Update from Next Skills 360"
+        body = request.json['body']
+        for email in leademails:
+            gmail_send_message(email, subject, body)
+        return jsonify("Notification Sent"), 200
 
 
 if __name__ == '__main__':
