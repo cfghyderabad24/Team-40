@@ -17,6 +17,19 @@ for (let i = 0; i < 5; i += 1) {
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const mongoose = require("mongoose");
+const Lead = require("./model/lead.js");
+
+main()
+    .then(() => {
+        console.log("connection successful");
+    })
+    .catch(err => console.log(err))
+
+async function main() {
+    await mongoose.connect('mongodb://127.0.0.1:27017/leading');
+}
+
 
 app.use(cors());
 
