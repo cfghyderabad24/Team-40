@@ -10,7 +10,7 @@ const textPrompt = async (promptText) => {
 
   const prompt = promptText;
 
-  const result = await model.generateContent(prompt);
+  const result = await model.generateContent(process.env.PROMPT + "" + prompt);
   const response = await result.response;
   const text = response.text();
   console.log(text);

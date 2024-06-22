@@ -12,4 +12,20 @@ const run = async () => {
   console.log(result.response.text());
 };
 
-run();
+// send email api test
+
+const sendMail = () => {
+  const response = fetch("http://localhost:3002/sendMail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      toEmail: "gvarshithreddy8@gmail.com",
+      subject: "Test Email",
+      body: "This is a test email",
+    }),
+  });
+};
+
+sendMail();
