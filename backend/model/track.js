@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const trackSchema = new mongoose.Schema({
-    trackNo: {
+    trackId: {
         type: Number,
         unique: true,
         required: true,
