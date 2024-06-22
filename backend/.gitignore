@@ -1,5 +1,4 @@
-test.js
-node_modules
-./credentials.json
 .env
+credentials.json
+node_modules
 .gitignore
