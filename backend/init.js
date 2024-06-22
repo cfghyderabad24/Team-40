@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Lead = require("./model/lead.js");
+const Track = require("./model/track.js");
 
 main()
     .then(() => {
@@ -34,5 +35,20 @@ Lead.insertMany([
     {
         email: "varshiththegreat857@gmail.com",
         phoneNo: 1234567890,
+    },
+])
+
+Track.insertMany([
+    {
+        trackNo: 1,
+        location: ['Hyderabad', 'Warangal'],
+    },
+    {
+        trackNo: 2,
+        location: ['Hyderabad', 'Vijayawada'],
+    },
+    {
+        trackNo: 3,
+        location: ['Hyderabad', 'Vishakhapatnam'],
     },
 ])
