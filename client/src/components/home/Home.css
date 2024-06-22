@@ -1,0 +1,21 @@
+.main {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  
+  .main p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-group {
+    margin-top: 2rem;
+  }
+  
+  .btn-group .btn {
+    margin-right: 0.5rem;
+  }
