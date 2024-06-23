@@ -9,8 +9,13 @@ const ChatBot = () => {
     setIsChatBoxVisible(!isChatBoxVisible);
   };
   return (
-    <div onClick={toggleChatBoxVisibility}>
-      <button className="button-chatbot-toggle">ChatBot</button>
+    <div>
+      <button
+        onClick={toggleChatBoxVisibility}
+        className="button-chatbot-toggle"
+      >
+        ChatBot
+      </button>
       {isChatBoxVisible && (
         <ChatBox toggleChatBoxVisibility={toggleChatBoxVisibility} />
       )}

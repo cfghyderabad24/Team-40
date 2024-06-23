@@ -13,16 +13,20 @@ const ChatBox = ({ toggleChatBoxVisibility }) => {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
     try {
-      const response = await axios.post(
-        "https://jsonplaceholder.typicode.com/posts",
-        {
-          message,
-        }
-      );
+      const response = await fetch("http://localhost:3001/textPrompt/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ promptText: message }),
+      });
+
+      const data = await response.json();
+      const text = data.text;
 
       const botMessage = {
         sender: "bot",
-        text: `Received response with ID: ${response.data.id}`,
+        text: text,
       };
 
       setMessages((prevMessages) => [...prevMessages, botMessage]);
