@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import YouTube from 'react-youtube';
 
 function Video() {
-  const videoId = 'https://youtu.be/ZeS9yXJa13Q?si=_ZGw7wITRmlgHfZC';
+  const videoId = 'ZeS9yXJa13Q';
   const playerRef = useRef(null);
 
   const onReady = (event) => {
@@ -23,14 +23,12 @@ function Video() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      height: '100vh',
-      backgroundColor: '#f5f5f5',
-      fontFamily: 'Arial, sans-serif'
+      fontFamily: 'Arial, sans-serif',
     }}>
-      <div style={{ maxWidth: '600px', width: '100%', marginBottom: '20px' }}>
-        <YouTube videoId={videoId} onReady={onReady} />
+      <div>
+        <YouTube style={{boxshadow: '0px 5px 8px black'}} videoId={videoId} onReady={onReady} />
       </div>
-      <div style={{ display: 'flex', gap: '10px' }}>
+      <div>
         <button onClick={playVideo} style={{
           padding: '10px 20px',
           border: 'none',
