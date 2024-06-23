@@ -7,7 +7,9 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer.jsx";
 import ChatBot from "./components/chatbot/ChatBot.jsx";
-const App = () => {
+import { Routes, Route } from "react-router-dom";
+import App from "./components/dash/src/App.js";
+const Main = () => {
   const [user, setUser] = useState("");
 
   return (
@@ -43,8 +45,12 @@ const App = () => {
           <Footer />
         </div>
       )}
+
+      <Routes>
+        <Route path="/admin" element={<App />} />
+      </Routes>
     </>
   );
 };
 
-export default App;
+export default Main;

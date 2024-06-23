@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Track = () => {
   const [tracksData, setTracksData] = useState([]);
@@ -6,11 +6,11 @@ const Track = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3001/track');
+        const response = await fetch("http://localhost:3001/track");
         const result = await response.json();
         setTracksData(result);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -38,7 +38,7 @@ const Track = () => {
           <tbody>
             {tracksData.map((track, index) => (
               <tr key={index}>
-                <td>{track.trackId}</td>
+                <td>{track.trackNo}</td>
                 <td>{track.location[0]}</td>
                 <td>
                   <select

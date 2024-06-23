@@ -1,6 +1,6 @@
 import { useState } from "react";
 import About from "./about_us/about_us/src/components/About";
-
+import logo from "./logo.png";
 function Header() {
   const styles = {
     button: {
@@ -50,42 +50,30 @@ function Header() {
         id="navig"
       >
         <div className="container-fluid">
-          <a className="navbar-brand rounded" href="#">
-            <img
-              src="C:\Users\amuly\Team-40-1\frontend\my-react\src\components\Ns logo white back.png"
-              alt="NEXT 360 logo"
-            />
+          <a className="navbar-brand rounded" href="/">
+            <img src={logo} alt="NEXT 360 logo" />
           </a>
           <div className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active text-white" href="#">
+              <a className="nav-link active text-white" href="/">
                 {" "}
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active text-white" href={"/About"}>
+              <a
+                className="nav-link active text-white"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleEvent();
+                }}
+              >
                 About us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="#">
-                Log in
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link active text-white" href="#">
-                {" "}
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link active text-white" href="#">
-                About us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-white" href="#">
+              <a className="nav-link text-white" href="/admin">
                 Log in
               </a>
             </li>
