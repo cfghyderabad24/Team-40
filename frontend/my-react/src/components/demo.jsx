@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import YouTube from 'react-youtube';
 
 function Video() {
-  const videoId = 'https://youtu.be/ZeS9yXJa13Q?si=_ZGw7wITRmlgHfZC';
+  const videoId = 'ZeS9yXJa13Q';
   const playerRef = useRef(null);
 
   const onReady = (event) => {

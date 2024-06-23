@@ -22,7 +22,7 @@ const App = () => {
       <Products/>
       
     </div> }
-    {(user == 'NGO'||'Govt Official') && <div>
+    {(user == 'NGO'||user=='Govt Official') && <div>
       <Showcase/>
       <HomePage setUser = {setUser} user={user} />
       <Chatbot />
