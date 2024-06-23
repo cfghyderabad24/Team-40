@@ -2,6 +2,7 @@
   text-align: center;
   padding: 50px; /* Sample background image */
   background-size: cover;
+  background-image: url("./Screenshot\ 2024-06-23\ 064741.png");
   background-position: center;
 
   height: 100vh;
@@ -21,12 +22,11 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   padding: 50px;
-  background-image: url("./Screenshot\ 2024-06-23\ 064741.png"); /* Sample background image */
+ /* Sample background image */
   background-size: cover;
   background-position: center;
 

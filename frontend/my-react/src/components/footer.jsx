@@ -7,7 +7,7 @@ export const Footer = () => {
         width : '100vw',
         height : '10vh' ,
         textAlign : "center",
-        position : 'fixed',
+        
         bottom : '0',
         fontSize:'0.75rem',
         padding:"10px"
@@ -26,3 +26,4 @@ export const Footer = () => {
     </>
   )
 }
+export default Footer;
