@@ -1,4 +1,5 @@
 import { useState } from "react";
+import About from "./about_us/about_us/src/components/About";
 
 function Header() {
   const styles = {
@@ -44,7 +45,7 @@ function Header() {
           }
         `}
       </style>
-      <nav className="navbar navbar-expand-lg bg-secondary  justify-content-center fixed-top " id="navig">
+      <nav className="navbar navbar-expand-lg bg-secondary  justify-content-center sticky-top " id="navig">
         <div className="container-fluid">
           <a className="navbar-brand rounded" href="#">
             <img src="./Ns logo white back.png" alt="NEXT 360 logo" />
@@ -59,7 +60,7 @@ function Header() {
               </ul>
             </li>
             <li className="nav-item"><a className="nav-link active text-white" href="#"> Home</a></li>
-            <li className="nav-item"><a className="nav-link active text-white" href="#">About us</a></li>
+            <li className="nav-item"><a className="nav-link active text-white" href={'/About'}>About us</a></li>
             <li className="nav-item"><a className="nav-link text-white" href="#">Log in</a></li>
             <form className="d-flex">
               <input className="form-control me-2" type="text" placeholder="Search" />
@@ -68,7 +69,6 @@ function Header() {
           </div>
         </div>
       </nav>
-      <button style={styles.button} onClick={handleEvent}>Click me {count}</button>
     </>
   );
 }

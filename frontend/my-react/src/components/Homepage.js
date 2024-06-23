@@ -13,10 +13,10 @@ const HomePage = ({setUser, user}) => {
 
   return (
     <div className="homepage">
-      <Navbar />
+     
       <div className="content">
         {showPopup && <h1>Welcome to the HomePage</h1>}
-        <Video />
+        {user!="" && <Video/>}
         {!user && <button onClick={togglePopup} className="btn btn-success profile-button">
           Select Profile
         </button>}
