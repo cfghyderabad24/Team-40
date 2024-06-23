@@ -9,10 +9,10 @@ import Navbar from "./components/Navbar";
 import ChatBot from "./components/chatbot/ChatBot.jsx";
 const App = () => {
   const [user, setUser] = useState("");
-  
+
   return (
     <>
-     <Navbar />
+      <Navbar />
       <ChatBot />
       {(user == "Parent" || user == "Learner") && (
         <div>

@@ -20,7 +20,7 @@ const HomePage = ({ setUser, user }) => {
             onClick={togglePopup}
             className="btn btn-success profile-button"
           >
-          Select Profile
+            Select Profile
           </button>
         )}
         {showPopup && (
