@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./ButtonStyle.css";
 const MessageInput = ({ onSendMessage }) => {
   const [message, setMessage] = useState("");
 
@@ -18,7 +18,9 @@ const MessageInput = ({ onSendMessage }) => {
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type a message..."
       />
-      <button onClick={handleSendMessage}>Send</button>
+      <button className="button-chatbot" onClick={handleSendMessage}>
+        Send
+      </button>
     </div>
   );
 };

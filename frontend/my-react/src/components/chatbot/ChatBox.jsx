@@ -4,7 +4,7 @@ import MessageList from "./MessageList";
 import axios from "axios";
 import "./ChatBox.css";
 
-const ChatBox = () => {
+const ChatBox = ({ toggleChatBoxVisibility }) => {
   const [messages, setMessages] = useState([]);
 
   const handleSendMessage = async (message) => {
@@ -38,6 +38,7 @@ const ChatBox = () => {
 
   return (
     <div className="chat-box">
+      <button onClick={toggleChatBoxVisibility}>Close</button>
       <MessageList messages={messages} />
       <MessageInput onSendMessage={handleSendMessage} />
     </div>
