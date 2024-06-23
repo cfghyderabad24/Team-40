@@ -1,29 +1,28 @@
 .homepage {
-    text-align: center;
-    padding: 50px;
-    background-image: url('C:\Users\amuly\Team-40-1\frontend\my-react\src\components\Screenshot 2024-06-23 064741.png'); /* Sample background image */
-    background-size: cover;
-    background-position: center;
-    
-    height: 100vh;
-  }
-  .profile-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .content {
-    margin-top: 100px;
-    height: 500px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
+  text-align: center;
+  padding: 50px;
+  background-image: url("C:\Users\amuly\Team-40-1\frontend\my-react\src\components\Screenshot 2024-06-23 064741.png"); /* Sample background image */
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+}
+.profile-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 100px;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
