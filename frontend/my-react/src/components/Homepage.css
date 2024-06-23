@@ -1,6 +1,7 @@
 .homepage {
   text-align: center;
-  padding: 50px; /* Sample background image */
+  padding: 50px;
+  background-image: url("./Screenshot 2024-06-23 064741.png"); /* Sample background image */
   background-size: cover;
   background-position: center;
 
