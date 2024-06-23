@@ -10,7 +10,6 @@ import Footer from "./components/footer.jsx";
 const App = () => {
   const [user, setUser] = useState("");
 
-  const [user, setUser] = useState("");
   return (
     <>
       <Navbar />
