@@ -1,9 +1,6 @@
-// App.js
 import React, { useState } from 'react';
 import Navbar from './component/Navbar';
-
 import Track from './component/Track';
-
 import Lead from './component/Lead';
 import './App.css';
 
@@ -20,9 +17,8 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      
       <div id="content">
-        <Navbar onNavClick={handleNavClick} /> {/* Pass onNavClick prop here */}
+        <Navbar onNavClick={handleNavClick} />
         <div className="container-fluid">
           {content}
         </div>

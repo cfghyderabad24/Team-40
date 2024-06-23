@@ -1,24 +1,32 @@
-// Leads.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Lead = () => {
-  // Sample data for leads
-  const leadsData = [
-    { id: 1, name: 'John Doe', email: 'john@example.com', phone: '123-456-7890' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com', phone: '987-654-3210' },
-    { id: 3, name: 'Michael Johnson', email: 'michael@example.com', phone: '555-555-5555' }
-  ];
+  const [leadsData, setLeadsData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/leads');
+        const result = await response.json();
+        setLeadsData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="container mt-4">
       <h3>Leads</h3>
-      <br/>
+      <br />
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Name</th>
+              {/* <th>ID</th>
+              <th>Name</th> */}
               <th>Email</th>
               <th>Phone</th>
             </tr>
@@ -26,10 +34,10 @@ const Lead = () => {
           <tbody>
             {leadsData.map((lead, index) => (
               <tr key={index}>
-                <td>{lead.id}</td>
-                <td>{lead.name}</td>
+                {/* <td>{lead.id}</td>
+                <td>{lead.name}</td> */}
                 <td>{lead.email}</td>
-                <td>{lead.phone}</td>
+                <td>{lead.phoneNo}</td>
               </tr>
             ))}
           </tbody>

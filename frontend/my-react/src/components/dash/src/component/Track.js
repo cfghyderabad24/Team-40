@@ -1,22 +1,28 @@
-// Tracks.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Track = () => {
-  // Sample data for tracks
-  const [tracksData, setTracksData] = useState([
-    { orderId: 101, transitId: 'TRN123', status: 'In Transit' },
-    { orderId: 102, transitId: 'TRN456', status: 'Delivered' },
-    { orderId: 103, transitId: 'TRN789', status: 'Delayed' }
-  ]);
+  const [tracksData, setTracksData] = useState([]);
 
-  // Function to handle status change
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/track');
+        const result = await response.json();
+        setTracksData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const handleStatusChange = (index, event) => {
     const updatedTracks = [...tracksData];
     updatedTracks[index].status = event.target.value;
     setTracksData(updatedTracks);
   };
 
- 
   return (
     <div className="container mt-4">
       <h3>Tracks</h3>
@@ -24,16 +30,16 @@ const Track = () => {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>Order ID</th>
               <th>Transit ID</th>
+              <th>Location</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
             {tracksData.map((track, index) => (
               <tr key={index}>
-                <td>{track.orderId}</td>
-                <td>{track.transitId}</td>
+                <td>{track.trackId}</td>
+                <td>{track.location[0]}</td>
                 <td>
                   <select
                     className="form-control"

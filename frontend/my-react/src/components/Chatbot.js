@@ -13,7 +13,7 @@ const Chatbot = () => {
       <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
         <div className="chatbot-header">
           <h4>Chatbot</h4>
-          <button className="close-btn" onClick={toggleChatbot}>×</button>
+          <button className="close-btn" onClick={toggleChatbot}>x</button>
         </div>
         <div className="chatbot-body">
           {/* Placeholder for chatbot API integration */}

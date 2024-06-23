@@ -1,18 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
 const { faker } = require("@faker-js/faker");
-let orders = [];
-let getOrder = () => {
-  return {
-    orderId: uuidv4(),
-    trackingNo: faker.string.uuid(),
-    status: "Ordered",
-    orderDate: faker.date.past(),
-  };
-};
-
-for (let i = 0; i < 5; i += 1) {
-  orders.push(getOrder());
-}
 
 const express = require("express");
 const app = express();
@@ -20,6 +7,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Lead = require("./model/lead.js");
 const Track = require("./model/track.js");
+const Order = require("./model/order.js")
 
 main()
   .then(() => {
@@ -75,6 +63,24 @@ app.post("/update", async (req, res) => {
 
   res.json({ message: "Notification sent" }, 200);
 });
+
+app.get('/track', async (req, res) => {
+    try {
+      let data = await Track.find({});
+      res.json(data);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+  
+  app.get('/leads', async (req, res) => {
+    try {
+      let data = await Lead.find({});
+      res.json(data);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
