@@ -1,0 +1,8 @@
+li{
+    display: inline;
+    text-decoration: none;
+    margin-left: 50px;
+}
+.container{
+    display: flex;
+}
