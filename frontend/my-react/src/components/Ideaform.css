@@ -1,0 +1,52 @@
+.idea-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-weight : bold;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  .idea-form label {
+    padding-top:20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .idea-form input,
+  .idea-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .idea-form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .idea-form button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .idea-form button:hover {
+    background-color: #45A049;
+  }
+  
