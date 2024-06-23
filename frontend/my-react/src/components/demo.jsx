@@ -28,26 +28,6 @@ function Video() {
       <div>
         <YouTube style={{boxshadow: '0px 5px 8px black'}} videoId={videoId} onReady={onReady} />
       </div>
-      <div>
-        <button onClick={playVideo} style={{
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          backgroundColor: '#4c56af',
-          color: 'white',
-          fontSize: '16px',
-          cursor: 'pointer'
-        }}>Play</button>
-        <button onClick={pauseVideo} style={{
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          backgroundColor: '#4c56af',
-          color: 'white',
-          fontSize: '16px',
-          cursor: 'pointer'
-        }}>Pause</button>
-      </div>
     </div>
   );
 }

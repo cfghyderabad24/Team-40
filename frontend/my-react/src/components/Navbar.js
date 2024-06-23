@@ -51,7 +51,10 @@ function Header() {
       >
         <div className="container-fluid">
           <a className="navbar-brand rounded" href="#">
-            <img src="./Ns logo white back.png" alt="NEXT 360 logo" />
+            <img
+              src="C:\Users\amuly\Team-40-1\frontend\my-react\src\components\Ns logo white back.png"
+              alt="NEXT 360 logo"
+            />
           </a>
           <div className="navbar-nav">
             <li className="nav-item">
@@ -62,6 +65,22 @@ function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link active text-white" href={"/About"}>
+                About us
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-white" href="#">
+                Log in
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href="#">
+                {" "}
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href="#">
                 About us
               </a>
             </li>
