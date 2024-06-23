@@ -1,0 +1,25 @@
+.container {
+    padding: 20px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .impact-title {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  .impact-description {
+    font-size: 1.25rem;
+    margin-top: 10px;
+  }
+  
+  .impact-percentage {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-top: 20px;
+  }
+  

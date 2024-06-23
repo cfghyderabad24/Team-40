@@ -10,3 +10,4 @@ const HomeScreen = ({ adminName }) => {
 };
 
 export default HomeScreen;
+
