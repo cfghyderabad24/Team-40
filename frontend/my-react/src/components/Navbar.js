@@ -4,14 +4,14 @@ import About from "./about_us/about_us/src/components/About";
 function Header() {
   const styles = {
     button: {
-      backgroundColor: 'black',
-      color: 'white',
-      height: '40px',
-      width: '80px',
-      border: 'none',
-      borderRadius: '5px',
-      cursor: 'pointer'
-    }
+      backgroundColor: "black",
+      color: "white",
+      height: "40px",
+      width: "80px",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+    },
   };
   const [count, setCount] = useState(0);
 
@@ -45,26 +45,59 @@ function Header() {
           }
         `}
       </style>
-      <nav className="navbar navbar-expand-lg bg-secondary  justify-content-center sticky-top " id="navig">
+      <nav
+        className="navbar navbar-expand-lg bg-secondary  justify-content-center sticky-top "
+        id="navig"
+      >
         <div className="container-fluid">
           <a className="navbar-brand rounded" href="#">
-            <img src="./Ns logo white back.png" alt="NEXT 360 logo" />
+            <img
+              src="C:\Users\amuly\Team-40-1\frontend\my-react\src\components\Ns logo white back.png"
+              alt="NEXT 360 logo"
+            />
           </a>
           <div className="navbar-nav">
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Link</a></li>
-                <li><a className="dropdown-item" href="#">Another link</a></li>
-                <li><a className="dropdown-item" href="#">A third link</a></li>
-              </ul>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href="#">
+                {" "}
+                Home
+              </a>
             </li>
-            <li className="nav-item"><a className="nav-link active text-white" href="#"> Home</a></li>
-            <li className="nav-item"><a className="nav-link active text-white" href={'/About'}>About us</a></li>
-            <li className="nav-item"><a className="nav-link text-white" href="#">Log in</a></li>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href={"/About"}>
+                About us
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-white" href="#">
+                Log in
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href="#">
+                {" "}
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active text-white" href="#">
+                About us
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-white" href="#">
+                Log in
+              </a>
+            </li>
             <form className="d-flex">
-              <input className="form-control me-2" type="text" placeholder="Search" />
-              <button className="btn btn-primary" type="submit">Search</button>
+              <input
+                className="form-control me-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button className="btn btn-primary" type="submit">
+                Search
+              </button>
             </form>
           </div>
         </div>

@@ -1,6 +1,5 @@
 .products-container {
-  margin-left: 25%;
-  width:800px;
+  width:100%;
   height: auto;
   display: flex;
   overflow-x: auto;  /* Enable horizontal scrolling */
@@ -24,7 +23,7 @@
 
 .product-card:hover {
   transform: translateY(-10px);
-  width: 400px;
+  width: 300px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
