@@ -24,7 +24,7 @@ const App = () => {
       <Products/>
       
     </div> }
-    {(user == 'NGO'|| user == 'Govt Official') && <div>
+    {(user == 'NGO'||user=='Govt Official') && <div>
       <Showcase/>
       <About/>
       <HomePage setUser = {setUser} user={user} />
